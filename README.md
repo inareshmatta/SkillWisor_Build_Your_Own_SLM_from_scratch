@@ -156,15 +156,30 @@ jupyter notebook SkillWisor_Build_Your_Own_SLM_from_scratch.ipynb
 
 <img src="assets/naresh_idea.png" alt="Naresh with an idea" width="130" align="right"/>
 
-- **Your own data:** swap TinyStories for any text dataset on the Hugging Face Hub, Kaggle, Project Gutenberg or Wikipedia. Check the licence first.
-- **Bigger brain:** raise `d`, `layers` or `heads`, then train for more steps.
-- **Longer memory:** increase `ctx`. It costs more memory and compute.
-- **Creative dial:** try `temperature` 0.3 (safe, repetitive) and 1.2 (wild, more mistakes).
-- **New skills:** write your own instruction → answer pairs for SFT.
+Now you've got the recipe, use it for **your** problem. It's a loop: **use case → architecture → data → train → test → ship**.
+
+**1. Start with the use case.** What job should the model do? Tag support tickets, summarise reports, answer questions about your product, or write in your company's style?
+
+**2. Pick the architecture that fits the job.**
+
+| If the job is… | Use | Why |
+|---|---|---|
+| understand & sort text (routing, spam, search) | encoder-only, e.g. BERT | lighter and faster for classification |
+| turn one text into another (translate, summarise) | encoder-decoder, e.g. T5 | one half reads, the other writes |
+| write or chat | **decoder-only GPT**, like this notebook | next-token generation |
+| very long inputs | state-space or hybrid models | cheap on long sequences |
+
+**3. Choose your own dataset.** Use data that looks exactly like the job: your tickets, your documents, your domain's language. Clean it the way the notebook does, check the licence, and keep personal or sensitive data out.
+
+**4. Train: start small, then scale.** Prove it works on a small run first. Often you don't need to start from zero: take an open small model and fine-tune it on your data with the same SFT step (Step 8).
+
+**5. Ship it in your application.** Load the saved weights behind a simple API, call `generate()` from your backend, and test with real tasks from real users.
+
+**Handy dials while you experiment:** raise `d`, `layers` or `heads` for a bigger brain; increase `ctx` for longer memory (costs more memory); try `temperature` 0.3 (safe) vs 1.2 (wild).
 
 ## 🎬 Watch the video
 
-This notebook goes with the **SkillWisor** video *Build your own AI from scratch*, and its 13 standalone Shorts. They explain every function and parameter with animations, code walkthroughs and the real screens from this run.
+This notebook goes with the **SkillWisor** video *Build your own AI from scratch*, and its 14 standalone Shorts. They explain every function and parameter with animations, code walkthroughs and the real screens from this run.
 
 ## 📚 Credits & further reading
 
