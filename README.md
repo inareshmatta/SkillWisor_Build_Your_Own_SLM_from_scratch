@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="Build your own AI from scratch: a 12.3M-parameter GPT trained on a free T4 GPU" width="100%"/>
+<img src="assets/banner.png" alt="Naresh Matta (SkillWisor): Build your own AI from scratch, a 12.3M-parameter GPT trained on a free T4 GPU" width="100%"/>
 
 <br/>
 
@@ -20,6 +20,8 @@ Every line of code has a plain-English comment. It's written for software engine
 ---
 
 ## ✨ What you'll build
+
+<img src="assets/naresh_welcome.png" alt="Naresh welcoming you" width="130" align="right"/>
 
 A **small language model (SLM)**: a decoder-only transformer in the GPT style, with **12.3 million parameters**. You train it from zero on [TinyStories](https://huggingface.co/datasets/roneneldan/TinyStories). Then you teach it to follow instructions, test it, and shrink it 4× so you can share it.
 
@@ -49,6 +51,8 @@ flowchart LR
 This is the same recipe the big labs follow. The difference is scale: more data, a bigger model and longer training.
 
 ## 🏗️ Which architecture, and why?
+
+<img src="assets/naresh_presenter.png" alt="Naresh presenting" width="130" align="right"/>
 
 | Family | Examples | How it reads | Best at |
 |---|---|---|---|
@@ -81,6 +85,8 @@ flowchart TB
 | parameters | **12.3M** | weight tying saves about 1.5M |
 
 ## 📊 Real results from the free T4 run
+
+<img src="assets/naresh_mindblown.png" alt="Naresh mind-blown" width="130" align="right"/>
 
 | Stage | Result |
 |---|---|
@@ -126,6 +132,8 @@ Validation loss stays close to training loss, so the model learned rather than m
 
 ## 🚀 Quick start
 
+<img src="assets/naresh_pointing.png" alt="Naresh pointing" width="130" align="right"/>
+
 **Google Colab (recommended)**
 1. Click **Open in Colab** above.
 2. `Runtime → Change runtime type → T4 GPU`.
@@ -145,6 +153,8 @@ jupyter notebook SkillWisor_Build_Your_Own_SLM_from_scratch.ipynb
 > 💡 Free Colab sessions can disconnect when idle. Save checkpoints to Google Drive if you extend training.
 
 ## 🧪 Make it your own
+
+<img src="assets/naresh_idea.png" alt="Naresh with an idea" width="130" align="right"/>
 
 - **Your own data:** swap TinyStories for any text dataset on the Hugging Face Hub, Kaggle, Project Gutenberg or Wikipedia. Check the licence first.
 - **Bigger brain:** raise `d`, `layers` or `heads`, then train for more steps.
@@ -167,7 +177,9 @@ This notebook goes with the **SkillWisor** video *Build your own AI from scratch
 
 <div align="center">
 
-**Made with ❤️ by SkillWisor**: AI explained for engineers.
+<img src="assets/naresh_presenter.png" alt="Naresh Matta" width="110"/>
+
+**Made with ❤️ by Naresh Matta · SkillWisor**: AI explained for engineers.
 
 Questions or your model's best story? Connect on [**LinkedIn**](https://www.linkedin.com/in/inareshmatta) ⭐ Star the repo if it helped you!
 
